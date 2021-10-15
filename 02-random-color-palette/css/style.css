@@ -1,0 +1,14 @@
+:root {
+    font-size: 12px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.palette {
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid #CCC;
+}
