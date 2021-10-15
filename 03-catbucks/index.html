@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cat"></div>
+      <div class="cup"></div>
+      <div class="logo"></div>
+      <div class="controls">
+        <label for="cupsize"></label>
+        <input
+          id="cupsize"
+          type="range"
+          name="cupsize"
+          min="0"
+          max="150"
+          value="0"
+        />
+      </div>
+    </div>
+
+    <script>
+      const input = document.querySelector(".controls input");
+
+      function handleUpdate() {
+        console.log(this.value);
+        document.documentElement.style.setProperty("--lid-top", -300 - this.value + "px");
+        document.documentElement.style.setProperty("--lid-base",-280 - this.value + "px");
+        document.documentElement.style.setProperty("--cathead", -20 - this.value + "px");
+      }
+      input.addEventListener("change", handleUpdate);
+      input.addEventListener("input", handleUpdate);
+    </script>
+  </body>
+</html>
