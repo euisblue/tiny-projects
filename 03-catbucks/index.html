@@ -13,23 +13,45 @@
       <div class="cup"></div>
       <div class="logo"></div>
       <div class="controls">
-        <label for="cupsize"></label>
-        <input
+        <div>
+          <label for="cupsize"></label>
+          <input
           id="cupsize"
           type="range"
           name="cupsize"
           min="0"
           max="150"
           value="0"
-        />
+          />
+        </div>
+
       </div>
     </div>
 
     <script>
       const input = document.querySelector(".controls input");
+      const cat = document.querySelector('.cat');
+      // refresh.addEventListener('click', () => window.location.reload());
+      changeCat();
 
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+      function changeCat() {
+        let numTypes = 6;
+        const imgPath = `cat${getRandomInt(numTypes) + 1}.svg`;
+          console.log(imgPath);
+          cat.style.backgroundImage = `url(./${imgPath})`;
+      }
+
+      let isOld = false;
       function handleUpdate() {
-        console.log(this.value);
+        if(this.value > 10) {
+          console.log('here, ', isOld);
+          isOld = true;
+        }
+        else if(isOld && this.value <= 5) window.location.reload();
         document.documentElement.style.setProperty("--lid-top", -300 - this.value + "px");
         document.documentElement.style.setProperty("--lid-base",-280 - this.value + "px");
         document.documentElement.style.setProperty("--cathead", -20 - this.value + "px");

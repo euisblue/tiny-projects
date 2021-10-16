@@ -6,34 +6,34 @@
 <path d="M240.66 25.1556L241.323 100.158L172.559 56.5869L240.66 25.1556Z" fill="#C4C4C4"/>
 <circle cx="85.5" cy="127.5" r="12.5" fill="#3C3C3C"/>
 <circle cx="191.5" cy="127.5" r="12.5" fill="#3C3C3C"/>
-<path d="M138.5 185L121.613 140L155.387 140L138.5 185Z" fill="#960000"/>
-<line x1="114.402" y1="123.466" x2="138.402" y2="186.466" stroke="black" stroke-width="3"/>
-<line x1="162.409" y1="123.514" x2="139.409" y2="186.514" stroke="black" stroke-width="3"/>
-<line x1="120" y1="139" x2="157" y2="139" stroke="black" stroke-width="2"/>
-<g filter="url(#filter0_d_46:46)">
+<path d="M139.5 192L122.613 147L156.387 147L139.5 192Z" fill="#960000"/>
+<line x1="115.402" y1="130.466" x2="139.402" y2="193.466" stroke="black" stroke-width="3"/>
+<line x1="163.409" y1="130.514" x2="140.409" y2="193.514" stroke="black" stroke-width="3"/>
+<line x1="121" y1="146" x2="158" y2="146" stroke="black" stroke-width="2"/>
+<g filter="url(#filter0_d_49:10)">
 <ellipse cx="97.7301" cy="242.103" rx="23" ry="52.6268" transform="rotate(-17.4596 97.7301 242.103)" fill="#C4C4C4"/>
 </g>
-<g filter="url(#filter1_d_46:46)">
+<g filter="url(#filter1_d_49:10)">
 <ellipse cx="184.931" cy="243.688" rx="23" ry="52.5" transform="rotate(15.1622 184.931 243.688)" fill="#C4C4C4"/>
 </g>
 <defs>
-<filter id="filter0_d_46:46" x="60" y="185" width="75.4603" height="118.206" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_49:10" x="60" y="185" width="75.4603" height="118.206" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0.235294 0 0 0 0 0.235294 0 0 0 0 0.235294 0 0 0 0.9 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_46:46"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_46:46" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_49:10"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_49:10" result="shape"/>
 </filter>
-<filter id="filter1_d_46:46" x="149" y="187" width="71.8617" height="117.376" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_d_49:10" x="149" y="187" width="71.8617" height="117.376" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0.235294 0 0 0 0 0.235294 0 0 0 0 0.235294 0 0 0 0.9 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_46:46"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_46:46" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_49:10"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_49:10" result="shape"/>
 </filter>
 </defs>
 </svg>
