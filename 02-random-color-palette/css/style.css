@@ -5,14 +5,20 @@
 .wrapper {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
+.palettes {
+    display: flex;
+    justify-content: center;
+}
 .palette {
     width: 15vw;
     height: 15vw;
     border: 1px solid #CCC;
     border-radius: 30px;
     margin: 12px;
+    transition: background-color 0.5s;
 }
 
 .palette:hover {
