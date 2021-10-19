@@ -1,6 +1,22 @@
 const rows = document.querySelectorAll(".row");
 const POKEMON_MAX = 898;
-let pokeIndex = Math.floor(Math.random() * POKEMON_MAX) + 1;
+const CARD_PAIRS = 4;
+let pokemons = getPokemonCards(CARD_PAIRS);
+
+function getPokemonID() {
+    return Math.floor(Math.random() * POKEMON_MAX) + 1;
+}
+
+function getPokemonCards(n) {
+    let arr = [];
+    while(true) {
+        let num = getPokemonID();
+        if(!arr.includes(num)) arr.push(num);
+        if(arr.length == n) break;
+    }
+
+    return arr;
+}
 
 async function getPokemonInfo(id) {
   let url = `https://pokeapi.co/api/v2/pokemon/${id}`;
@@ -12,18 +28,26 @@ async function getPokemonInfo(id) {
   }
 }
 
-async function renderPokemon() {
-  let pokeInfo = await getPokemonInfo(pokeIndex);
-  let path = pokeInfo.sprites.other;
-  path = path['official-artwork'];
-  path = path['front_default'];
+async function renderPokemon(pokemon, index, row) {
+    const rowA = rows[row];
+    const cards = rowA.querySelectorAll('.card');
+    
+    let pokeInfo = await getPokemonInfo(pokemon);
+    let path = pokeInfo.sprites.other;
+    path = path['official-artwork'];
+    path = path['front_default'];
 
-  const rowA = rows[0];
-  const cards = rowA.querySelectorAll('.card');
-  console.log(cards);
-  cards.forEach((card) => {
-      card.querySelector(".pokemon-image").style.backgroundImage = `url(${path})`;
-      card.querySelector(".pokemon-name").textContent = pokeInfo.name;
-  })
+    cards[index].querySelector(".pokemon-image").style.backgroundImage = `url(${path})`;
+    cards[index].querySelector(".pokemon-name").textContent = pokeInfo.name;
 }
-renderPokemon();
+
+pokemons.forEach((pokemon, idx) => {
+    renderPokemon(pokemon, idx, 0);
+});
+
+[pokemons[0], pokemons[2]] = [pokemons[2], pokemons[0]];
+[pokemons[1], pokemons[3]] = [pokemons[3], pokemons[1]];
+
+pokemons.forEach((pokemon, idx) => {
+    renderPokemon(pokemon, idx, 1);
+});
