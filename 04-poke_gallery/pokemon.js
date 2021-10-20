@@ -1,3 +1,4 @@
+const cards = document.querySelectorAll('.card');
 const rows = document.querySelectorAll(".row");
 const POKEMON_MAX = 898;
 const CARD_PAIRS = 4;
@@ -39,15 +40,24 @@ async function renderPokemon(pokemon, index, row) {
 
     cards[index].querySelector(".pokemon-image").style.backgroundImage = `url(${path})`;
     cards[index].querySelector(".pokemon-name").textContent = pokeInfo.name;
+
+    cards[index].querySelector('.pokemon-image').classList.add('back');
+
+    // @TODO 
+    cards[index].querySelector('.pokemon-image').addEventListener('click', (e) =>console.log(e))
 }
 
 pokemons.forEach((pokemon, idx) => {
     renderPokemon(pokemon, idx, 0);
 });
 
+// randomize - hardcoded for now
 [pokemons[0], pokemons[2]] = [pokemons[2], pokemons[0]];
 [pokemons[1], pokemons[3]] = [pokemons[3], pokemons[1]];
 
+// display pokemon cards
 pokemons.forEach((pokemon, idx) => {
     renderPokemon(pokemon, idx, 1);
 });
+
+console.log(cards);
